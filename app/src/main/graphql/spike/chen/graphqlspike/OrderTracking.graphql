@@ -1,0 +1,18 @@
+query OrderTracking {
+  user {
+    orderTracking {
+      status
+      products {
+        skuId
+        images {
+          x500
+        }
+      }
+      itemCount
+      displayDeliveryDate
+      trackingUrl
+      orderDate
+      isScheduledDelivery
+    }
+  }
+}
