@@ -1,4 +1,5 @@
 query OrderTracking {
+ root(zipCode: "07030") {
   user {
     orderTracking {
       status
@@ -15,4 +16,5 @@ query OrderTracking {
       isScheduledDelivery
     }
   }
+ }
 }

@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         override fun onResponse(response: Response<OrderTrackingQuery.Data>) {
-          mainText.text = response.data()?.user.toString()
+          mainText.text = response.data()?.toString()
         }
       }, uiHandler))
 
