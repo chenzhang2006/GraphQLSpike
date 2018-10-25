@@ -1,5 +1,5 @@
-query OrderTracking {
- root(zipCode: "07030") {
+query OrderTracking($zip: Zip) {
+ root(zipCode: $zip) {
   user {
     orderTracking {
       status

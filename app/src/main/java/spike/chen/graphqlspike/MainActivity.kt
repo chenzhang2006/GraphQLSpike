@@ -11,8 +11,11 @@ import com.apollographql.apollo.ApolloClient
 import com.apollographql.apollo.api.Response
 import com.apollographql.apollo.exception.ApolloException
 import com.apollographql.apollo.fetcher.ApolloResponseFetchers
+import com.apollographql.apollo.response.CustomTypeAdapter
+import com.apollographql.apollo.response.CustomTypeValue
 import kotlinx.android.synthetic.main.activity_main.*
 import okhttp3.OkHttpClient
+import spike.chen.graphqlspike.type.CustomType
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,10 +25,23 @@ class MainActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
 
-    val orderTrackingQuery = OrderTrackingQuery.builder().build()
+    val orderTrackingQuery = OrderTrackingQuery.builder().zip(Zip("08057")).build()
+
+    val zipCustomTypeAdapter = object : CustomTypeAdapter<Zip> {
+      override fun encode(value: Zip): CustomTypeValue<*> {
+        return CustomTypeValue.GraphQLString(value.zipCode)
+      }
+
+      override fun decode(value: CustomTypeValue<*>): Zip {
+        return Zip(value.value.toString())
+      }
+
+    }
+
     val apolloClient = ApolloClient.builder()
       .serverUrl("http://batman-graphapi.nomad.eastus2.qa.jet.network/graphql")
       .okHttpClient(OkHttpClient())
+      .addCustomTypeAdapter(CustomType.ZIP, zipCustomTypeAdapter)
       .build()
 
     apolloClient.query(orderTrackingQuery)
