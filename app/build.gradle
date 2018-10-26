@@ -40,4 +40,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.apollographql.apollo:apollo-runtime:1.0.0-alpha2'
     implementation "com.apollographql.apollo:apollo-android-support:1.0.0-alpha2"
+    implementation 'com.apollographql.apollo:apollo-rx-support:1.0.0-alpha2'
+    api 'io.reactivex:rxandroid:1.2.1'
 }

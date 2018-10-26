@@ -13,8 +13,11 @@ import com.apollographql.apollo.exception.ApolloException
 import com.apollographql.apollo.fetcher.ApolloResponseFetchers
 import com.apollographql.apollo.response.CustomTypeAdapter
 import com.apollographql.apollo.response.CustomTypeValue
+import com.apollographql.apollo.rx.RxApollo
 import kotlinx.android.synthetic.main.activity_main.*
 import okhttp3.OkHttpClient
+import rx.android.schedulers.AndroidSchedulers
+import rx.schedulers.Schedulers
 import spike.chen.graphqlspike.type.CustomType
 
 class MainActivity : AppCompatActivity() {
@@ -44,17 +47,24 @@ class MainActivity : AppCompatActivity() {
       .addCustomTypeAdapter(CustomType.ZIP, zipCustomTypeAdapter)
       .build()
 
-    apolloClient.query(orderTrackingQuery)
+    val apolloCall = apolloClient.query(orderTrackingQuery)
       .responseFetcher(ApolloResponseFetchers.NETWORK_ONLY)
-      .enqueue(ApolloCallback(object : ApolloCall.Callback<OrderTrackingQuery.Data>() {
-        override fun onFailure(e: ApolloException) {
-          Log.e("Main", e.message, e)
-        }
+//      .enqueue(ApolloCallback(object : ApolloCall.Callback<OrderTrackingQuery.Data>() {
+//        override fun onFailure(e: ApolloException) {
+//          Log.e("Main", e.message, e)
+//        }
+//
+//        override fun onResponse(response: Response<OrderTrackingQuery.Data>) {
+//          mainText.text = response.data()?.toString()
+//        }
+//      }, uiHandler))
 
-        override fun onResponse(response: Response<OrderTrackingQuery.Data>) {
-          mainText.text = response.data()?.toString()
-        }
-      }, uiHandler))
+    val observable = RxApollo.from(apolloCall)
+    observable.subscribeOn(Schedulers.io())
+      .observeOn(AndroidSchedulers.mainThread())
+      .subscribe { response: Response<OrderTrackingQuery.Data> ->
+        mainText.text = response.data()?.toString()
+      }
 
   }
 }
