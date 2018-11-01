@@ -16,6 +16,7 @@ import com.apollographql.apollo.response.CustomTypeValue
 import com.apollographql.apollo.rx.RxApollo
 import kotlinx.android.synthetic.main.activity_main.*
 import okhttp3.OkHttpClient
+import rx.Subscription
 import rx.android.schedulers.AndroidSchedulers
 import rx.schedulers.Schedulers
 import spike.chen.graphqlspike.type.CustomType
@@ -23,6 +24,7 @@ import spike.chen.graphqlspike.type.CustomType
 class MainActivity : AppCompatActivity() {
 
   private var uiHandler = Handler(Looper.getMainLooper())
+  private var subscription: Subscription? = null
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -60,11 +62,16 @@ class MainActivity : AppCompatActivity() {
 //      }, uiHandler))
 
     val observable = RxApollo.from(apolloCall)
-    observable.subscribeOn(Schedulers.io())
+    subscription = observable.subscribeOn(Schedulers.io())
       .observeOn(AndroidSchedulers.mainThread())
       .subscribe { response: Response<OrderTrackingQuery.Data> ->
         mainText.text = response.data()?.toString()
       }
 
+  }
+
+  override fun onDestroy() {
+    subscription?.unsubscribe()
+    super.onDestroy()
   }
 }
