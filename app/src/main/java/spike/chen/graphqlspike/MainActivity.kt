@@ -43,9 +43,21 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    val httpClient = OkHttpClient.Builder()
+      .addInterceptor { chain ->
+        val original = chain.request()
+
+        // Request customization: add request headers
+        val requestBuilder = original.newBuilder()
+          .header("mock", "true")
+
+        val request = requestBuilder.build()
+        chain.proceed(request)
+      }.build()
+
     val apolloClient = ApolloClient.builder()
       .serverUrl("http://batman-graphapi.nomad.eastus2.qa.jet.network/graphql")
-      .okHttpClient(OkHttpClient())
+      .okHttpClient(httpClient)
       .addCustomTypeAdapter(CustomType.ZIP, zipCustomTypeAdapter)
       .build()
 
