@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
       }.build()
 
     val apolloClient = ApolloClient.builder()
-      .serverUrl("http://batman-graphapi.nomad.eastus2.qa.jet.network/graphql")
+      .serverUrl("https://batman-graphapi.nomad.eastus2.qa.jet.network/graphql")
       .okHttpClient(httpClient)
       .addCustomTypeAdapter(CustomType.ZIP, zipCustomTypeAdapter)
       .build()
@@ -76,10 +76,10 @@ class MainActivity : AppCompatActivity() {
     val observable = RxApollo.from(apolloCall)
     subscription = observable.subscribeOn(Schedulers.io())
       .observeOn(AndroidSchedulers.mainThread())
-      .subscribe { response: Response<OrderTrackingQuery.Data> ->
-        mainText.text = response.data()?.toString()
-      }
-
+      .subscribe(
+        { response: Response<OrderTrackingQuery.Data> -> mainText.text = response.data()?.toString() },
+        { error: Throwable -> Log.e("error back", error.message) }
+      )
   }
 
   override fun onDestroy() {

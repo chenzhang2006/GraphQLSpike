@@ -193,7 +193,7 @@
         "fields": [
           {
             "name": "skuId",
-            "description": "Retail Sku Id of the Product",
+            "description": "Retail Sku Id of the Product [No upstream]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -209,7 +209,7 @@
           },
           {
             "name": "isRedirect",
-            "description": "is it a redirected sku due to merge/demerge",
+            "description": "is it a redirected sku due to merge/demerge [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -225,7 +225,7 @@
           },
           {
             "name": "originalRetailSkuId",
-            "description": "if is_redirect original product id",
+            "description": "if is_redirect original product id [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -237,7 +237,7 @@
           },
           {
             "name": "title",
-            "description": "title of the product",
+            "description": "title of the product [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -253,7 +253,7 @@
           },
           {
             "name": "description",
-            "description": "description of the product",
+            "description": "description of the product [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -269,7 +269,7 @@
           },
           {
             "name": "brand",
-            "description": "brand / manufacturer of the product",
+            "description": "brand / manufacturer of the product [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -285,7 +285,7 @@
           },
           {
             "name": "bullets",
-            "description": "bullets description associated with product",
+            "description": "bullets description associated with product [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "LIST",
@@ -305,7 +305,7 @@
           },
           {
             "name": "frozen",
-            "description": "is frozen unit",
+            "description": "is frozen unit [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -321,7 +321,7 @@
           },
           {
             "name": "fresh",
-            "description": "is item fresh",
+            "description": "is item fresh [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -353,7 +353,7 @@
           },
           {
             "name": "num_of_units",
-            "description": "Number of Units",
+            "description": "Number of Units [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -365,7 +365,7 @@
           },
           {
             "name": "dimensions",
-            "description": "Physical Dimensions of the Product",
+            "description": "Physical Dimensions of the Product [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -377,7 +377,7 @@
           },
           {
             "name": "images",
-            "description": "Array of Images of this Product",
+            "description": "Array of Images of this Product [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "LIST",
@@ -393,7 +393,7 @@
           },
           {
             "name": "referencePrice",
-            "description": "Competitive Price Merchants Send Through",
+            "description": "Competitive Price Merchants Send Through [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -409,7 +409,7 @@
           },
           {
             "name": "shippingPromise",
-            "description": "`TwoDay` if there is a Two-Day Shipping promise | `null` if there is no shipping-promise.",
+            "description": "`TwoDay` if there is a Two-Day Shipping promise | `null` if there is no shipping-promise. [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "ENUM",
@@ -421,7 +421,7 @@
           },
           {
             "name": "shippingPromises",
-            "description": "Array that contains the same value as shippingPromise and `ScheduledDelivery` if scheduled delivery is available",
+            "description": "Array that contains the same value as shippingPromise and `ScheduledDelivery` if scheduled delivery is available [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -441,7 +441,7 @@
           },
           {
             "name": "mapLevel",
-            "description": "101: No restriction | 102: Minimum Advertised Price | 103: Minimum Selling Price",
+            "description": "101: No restriction | 102: Minimum Advertised Price | 103: Minimum Selling Price [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -457,7 +457,7 @@
           },
           {
             "name": "isDeal",
-            "description": "Whether the Product has a Deal on It",
+            "description": "Whether the Product has a Deal on It [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -473,7 +473,7 @@
           },
           {
             "name": "savingsDetail",
-            "description": "Breakdown of Different Savings on the Product",
+            "description": "Breakdown of Different Savings on the Product [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -485,7 +485,7 @@
           },
           {
             "name": "savingsActions",
-            "description": "Debit and Waive-Return Savings Amounts",
+            "description": "Debit and Waive-Return Savings Amounts [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -497,7 +497,7 @@
           },
           {
             "name": "reviews",
-            "description": "Review Information",
+            "description": "Review Information [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -513,7 +513,7 @@
           },
           {
             "name": "variants",
-            "description": "Variant Information about This Product (E.g. Shoe that is Color: Blue, Size: 6, Width: Narrow)",
+            "description": "Variant Information about This Product (E.g. Shoe that is Color: Blue, Size: 6, Width: Narrow) [Upstream Beast-Availability]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -533,7 +533,7 @@
           },
           {
             "name": "productAvailability",
-            "description": "",
+            "description": "[Upstream Beast-Multiproduct Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -549,7 +549,7 @@
           },
           {
             "name": "attributes",
-            "description": "`Fresh`, `NonReturnable`, `Frozen`, or `Smart`",
+            "description": "`Fresh`, `NonReturnable`, `Frozen`, or `Smart` [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -613,7 +613,7 @@
           },
           {
             "name": "shortDescription",
-            "description": "Description of this Warranty to be used in Abbreviated Contexts",
+            "description": "Description of this Warranty to be used in Abbreviated Contexts [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -668,7 +668,7 @@
           },
           {
             "name": "timesOrdered",
-            "description": "Number of Times the User Has Placed an Order That Contains This Sku",
+            "description": "Number of Times the User Has Placed an Order That Contains This Sku [Upstream Mystique-/client/item_level_order_history]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -680,7 +680,7 @@
           },
           {
             "name": "quantityOrdered",
-            "description": "Sum of Quantity for This Sku Across All Orders From User",
+            "description": "Sum of Quantity for This Sku Across All Orders From User [Upstream Mystique-/client/item_level_order_history]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -692,7 +692,7 @@
           },
           {
             "name": "recommendations",
-            "description": "Recommended Products Based on This Sku",
+            "description": "Recommended Products Based on This Sku [Upstream ProfX-Single-Recos]",
             "args": [
               {
                 "name": "categoryId",
@@ -761,7 +761,7 @@
           },
           {
             "name": "recommendationType",
-            "description": "Type of Recommendation",
+            "description": "Type of Recommendation [Upstream ProfX-Single-Recos]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -773,7 +773,7 @@
           },
           {
             "name": "confidence",
-            "description": "ProfX Confidence in Recommendation",
+            "description": "ProfX Confidence in Recommendation [Upstream ProfX-Single-Recos]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -785,7 +785,7 @@
           },
           {
             "name": "recommendationTitle",
-            "description": "ProfX Recommendations Title",
+            "description": "ProfX Recommendations Title [Upstream ProfX-Single-Recos]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -797,7 +797,7 @@
           },
           {
             "name": "isColocated",
-            "description": "Whether the sku is colocated",
+            "description": "Whether the sku is colocated [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -813,7 +813,7 @@
           },
           {
             "name": "savedForLaterDate",
-            "description": "When product was saved for later",
+            "description": "When product was saved for later [Upstream Batman-api/mysaves]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -825,7 +825,7 @@
           },
           {
             "name": "searchTerm",
-            "description": "PLP Search",
+            "description": "PLP Search [Upstream ProfX Search]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -837,7 +837,7 @@
           },
           {
             "name": "searchScore",
-            "description": "Search Score",
+            "description": "Search Score [Upstream ProfX Search]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -849,7 +849,7 @@
           },
           {
             "name": "searchPosition",
-            "description": "Search Position",
+            "description": "Search Position [Upstream ProfX Search]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -861,7 +861,7 @@
           },
           {
             "name": "beaconId",
-            "description": "Beacons",
+            "description": "Beacons [Upstream ProfX Search or Storm Homepage/Carousel Skus]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -873,7 +873,7 @@
           },
           {
             "name": "promo",
-            "description": "PDP Promo Code fields",
+            "description": "PDP Promo Code fields [Upstream Storm Promo Api]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -889,7 +889,7 @@
           },
           {
             "name": "marketingSlotNumber",
-            "description": "Homepage Skus Slot Number",
+            "description": "Homepage Skus Slot Number [Upstream Storm Homepage]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -901,7 +901,7 @@
           },
           {
             "name": "rviTimesViewed",
-            "description": "Recent Viewed Items",
+            "description": "Recent Viewed Items [Upstream Batman api/recent-items/list]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1134,6 +1134,12 @@
             "description": "",
             "isDeprecated": false,
             "deprecationReason": null
+          },
+          {
+            "name": "StandardDelivery",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
           }
         ],
         "possibleTypes": null
@@ -1209,7 +1215,7 @@
           },
           {
             "name": "smartCartSavingsCart",
-            "description": "",
+            "description": "this field applies to other items in the cart, should be not be used to calculate effectivePrice on the current item",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -1471,7 +1477,7 @@
         "fields": [
           {
             "name": "effectivePrice",
-            "description": "Price that includes all savings",
+            "description": "Price that includes all savings [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1483,7 +1489,7 @@
           },
           {
             "name": "listPrice",
-            "description": "MSRP price Merchants pass Through",
+            "description": "MSRP price Merchants pass Through [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1495,7 +1501,7 @@
           },
           {
             "name": "referencePrice",
-            "description": "Competitive Price Merchants Send Through",
+            "description": "Competitive Price Merchants Send Through [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -1535,7 +1541,7 @@
           },
           {
             "name": "maxQuantity",
-            "description": "Maximum Quantity Allowable per Order",
+            "description": "Maximum Quantity Allowable per Order [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -1551,7 +1557,7 @@
           },
           {
             "name": "minQuantity",
-            "description": "Minimum Quantity Alowable per Order",
+            "description": "Minimum Quantity Alowable per Order [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1563,7 +1569,7 @@
           },
           {
             "name": "quantityInCart",
-            "description": "Quantity of this Sku in Your Cart Across all Contexts (Bundles, Dependent, etc). Same Value as ProductAndPriceFlat.quantityInCart",
+            "description": "Quantity of this Sku in Your Cart Across all Contexts (Bundles, Dependent, etc). [Upstream Batman api/cart/query-data]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -1579,7 +1585,7 @@
           },
           {
             "name": "quantityInCartAsDependent",
-            "description": "Quantity of this Sku in Cart with 'anchorSkuId' as its Parent. Same Value as ProductAndPriceFlat.quantityInCartAsDependent",
+            "description": "Quantity of this Sku in Cart with 'anchorSkuId' as its Parent. [Upstream Batman api/cart/query-data]",
             "args": [
               {
                 "name": "anchorSkuId",
@@ -1606,7 +1612,7 @@
           },
           {
             "name": "totalSavings",
-            "description": "Total Item-Level Savings, not including Cart-Level and Order-Level Savings",
+            "description": "Total Item-Level Savings not including Cart-Level and Order-Level Savings [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -1622,7 +1628,7 @@
           },
           {
             "name": "wasPrice",
-            "description": "Previous Price of the Product if isDeal=true",
+            "description": "Previous Price of the Product if isDeal=true [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1634,7 +1640,7 @@
           },
           {
             "name": "availability",
-            "description": "The exact same thing as productAvailability field on ProductAndPriceFlat level",
+            "description": "The exact same thing as productAvailability field on ProductAndPriceFlat level [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -1650,7 +1656,7 @@
           },
           {
             "name": "quantityPrice",
-            "description": "An Array of a Single Object for Item Quantity = 1",
+            "description": "An Array of a Single Object for Item Quantity = 1 [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -1670,7 +1676,7 @@
           },
           {
             "name": "displayPrice",
-            "description": "Main price that clients are expected to display for this Sku",
+            "description": "Main price that clients are expected to display for this Sku [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -1686,7 +1692,7 @@
           },
           {
             "name": "persistence",
-            "description": "Price Persistence Token from Superman",
+            "description": "Price Persistence Token from Superman [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1725,7 +1731,7 @@
           },
           {
             "name": "startPrice",
-            "description": "Price of an Item after Item, Smart Cart, and Quantity Savings",
+            "description": "Price of an Item after Item, Smart Cart, and Quantity Savings [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -1741,7 +1747,7 @@
           },
           {
             "name": "waiveReturnPrice",
-            "description": "starting price after waive return savings",
+            "description": "starting price after waive return savings [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -1807,7 +1813,7 @@
         "fields": [
           {
             "name": "type",
-            "description": "",
+            "description": "[Upstream Storm Sku Promo Code]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1819,7 +1825,7 @@
           },
           {
             "name": "discountAmount",
-            "description": "",
+            "description": "[Upstream Storm Sku Promo Code]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1831,7 +1837,7 @@
           },
           {
             "name": "maxDiscount",
-            "description": "",
+            "description": "[Upstream Storm Sku Promo Code]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1843,7 +1849,7 @@
           },
           {
             "name": "orderMinimum",
-            "description": "",
+            "description": "[Upstream Storm Sku Promo Code]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1855,7 +1861,7 @@
           },
           {
             "name": "expirationDate",
-            "description": "",
+            "description": "[Upstream Storm Sku Promo Code]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1867,7 +1873,7 @@
           },
           {
             "name": "termsAndConditions",
-            "description": "",
+            "description": "[Upstream Storm Sku Promo Code]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1879,7 +1885,7 @@
           },
           {
             "name": "seoHeadline",
-            "description": "",
+            "description": "[Upstream Storm Sku Promo Code]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1891,7 +1897,7 @@
           },
           {
             "name": "seoBody",
-            "description": "",
+            "description": "[Upstream Storm Sku Promo Code]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1903,7 +1909,7 @@
           },
           {
             "name": "outboundUrl",
-            "description": "",
+            "description": "[Upstream Storm Sku Promo Code]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1915,7 +1921,7 @@
           },
           {
             "name": "codeInstanceName",
-            "description": "",
+            "description": "[Upstream Storm Sku Promo Code]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1927,7 +1933,7 @@
           },
           {
             "name": "codeLevel",
-            "description": "",
+            "description": "[Upstream Storm Sku Promo Code]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1939,7 +1945,7 @@
           },
           {
             "name": "devicePermitted",
-            "description": "",
+            "description": "[Upstream Storm Sku Promo Code]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1951,7 +1957,7 @@
           },
           {
             "name": "userAllowed",
-            "description": "",
+            "description": "[Upstream Storm Sku Promo Code]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2186,7 +2192,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "OBJECT",
-                  "name": "ProductAndPriceFlat",
+                  "name": "Product",
                   "ofType": null
                 }
               }
@@ -2210,9 +2216,13 @@
               }
             ],
             "type": {
-              "kind": "OBJECT",
-              "name": "OrderTracking",
-              "ofType": null
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "OrderTracking",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -2230,7 +2240,7 @@
         "fields": [
           {
             "name": "email",
-            "description": "",
+            "description": "[Upstream Storm CPC 2.0]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2242,7 +2252,7 @@
           },
           {
             "name": "promotions",
-            "description": "",
+            "description": "[Upstream Storm CPC 2.0]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2254,7 +2264,7 @@
           },
           {
             "name": "productReview",
-            "description": "",
+            "description": "[Upstream Storm CPC 2.0]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2266,7 +2276,7 @@
           },
           {
             "name": "quickSurvey",
-            "description": "",
+            "description": "[Upstream Storm CPC 2.0]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2289,7 +2299,7 @@
         "fields": [
           {
             "name": "skuId",
-            "description": "Retail Sku Id of the Product",
+            "description": "Retail Sku Id of the Product [No upstream]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -2305,7 +2315,7 @@
           },
           {
             "name": "groupId",
-            "description": "Group Id from Beast used with Variants",
+            "description": "Group Id from Beast used with Variants [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2317,7 +2327,7 @@
           },
           {
             "name": "title",
-            "description": "Product Title",
+            "description": "Product Title [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2329,7 +2339,7 @@
           },
           {
             "name": "subtitle",
-            "description": "Product Subtitle",
+            "description": "Product Subtitle [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2341,7 +2351,7 @@
           },
           {
             "name": "descriptionText",
-            "description": "Product Description",
+            "description": "Product Description [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2353,7 +2363,7 @@
           },
           {
             "name": "descriptionBullets",
-            "description": "Bullet Point Description",
+            "description": "Bullet Point Description [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "LIST",
@@ -2369,7 +2379,7 @@
           },
           {
             "name": "images",
-            "description": "Product Images",
+            "description": "Product Images [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "LIST",
@@ -2385,7 +2395,7 @@
           },
           {
             "name": "price",
-            "description": "Product Price Information",
+            "description": "Product Price Information [Upstream Superman-v2/Seach]",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -2397,7 +2407,7 @@
           },
           {
             "name": "bulkPrices",
-            "description": "Array of Price Information based on queried quantities",
+            "description": "Array of Price Information based on queried quantities [Upstream Superman-v2/PriceDetails]",
             "args": [
               {
                 "name": "quantities",
@@ -2428,7 +2438,7 @@
           },
           {
             "name": "minQuantity",
-            "description": "Minimum Quantity Allowed in Cart",
+            "description": "Minimum Quantity Allowed in Cart [Upstream Superman-v2/Seach]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2440,7 +2450,7 @@
           },
           {
             "name": "maxQuantity",
-            "description": "Maximum Quantity Allowed in Cart",
+            "description": "Maximum Quantity Allowed in Cart [Upstream Superman-v2/Seach]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2452,7 +2462,7 @@
           },
           {
             "name": "quantityInCart",
-            "description": "Current Quantity in Cart",
+            "description": "Current Quantity in Cart [Upstream Batman api/cart/query-data]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2464,7 +2474,7 @@
           },
           {
             "name": "availability",
-            "description": "Availability Status",
+            "description": "Availability Status [Upstream Beast-Multiproduct Superman-v2/Seach]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -2480,7 +2490,7 @@
           },
           {
             "name": "reviews",
-            "description": "Product Review Data",
+            "description": "Product Review Data [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -2492,7 +2502,7 @@
           },
           {
             "name": "brand",
-            "description": "Product Brand",
+            "description": "Product Brand [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2504,7 +2514,7 @@
           },
           {
             "name": "mapLevel",
-            "description": "101: No restriction | 102: Minimum Advertised Price | 103: Minimum Selling Price",
+            "description": "101: No restriction | 102: Minimum Advertised Price | 103: Minimum Selling Price [Upstream Superman-v2/Seach]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2516,7 +2526,7 @@
           },
           {
             "name": "isFresh",
-            "description": "Whether Product is Fresh",
+            "description": "Whether Product is Fresh [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2528,7 +2538,7 @@
           },
           {
             "name": "isSmartCartItem",
-            "description": "Whether Product has Smart Cart Savings",
+            "description": "Whether Product has Smart Cart Savings [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2540,7 +2550,7 @@
           },
           {
             "name": "isBestSeller",
-            "description": "Whether Product is Best Seller",
+            "description": "Whether Product is Best Seller [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2552,7 +2562,7 @@
           },
           {
             "name": "isDeal",
-            "description": "Whether Product is a Deal",
+            "description": "Whether Product is a Deal [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2564,7 +2574,7 @@
           },
           {
             "name": "isFrozen",
-            "description": "Whether Product is Frozen",
+            "description": "Whether Product is Frozen [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2576,7 +2586,7 @@
           },
           {
             "name": "isAdult",
-            "description": "Whether Product is Adult Restricted",
+            "description": "Whether Product is Adult Restricted [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2588,7 +2598,7 @@
           },
           {
             "name": "isNonReturnable",
-            "description": "Whether Product is not Returnable",
+            "description": "Whether Product is not Returnable [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2600,7 +2610,7 @@
           },
           {
             "name": "shippingOptions",
-            "description": "Array that contains the same value as shippingPromise and `ScheduledDelivery` if scheduled delivery is available",
+            "description": "Array that contains the same value as shippingPromise and `ScheduledDelivery` if scheduled delivery is available [Upstream Superman-v2/Seach]",
             "args": [],
             "type": {
               "kind": "LIST",
@@ -2616,7 +2626,7 @@
           },
           {
             "name": "variants",
-            "description": "Product Variants",
+            "description": "Product Variants [Upstream Beast-Multiproduct Beast-Availability]",
             "args": [],
             "type": {
               "kind": "LIST",
@@ -2624,6 +2634,22 @@
               "ofType": {
                 "kind": "OBJECT",
                 "name": "Variant",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "hasVariants",
+            "description": "has more variants [Upstream Beast-Multiproduct]",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
                 "ofType": null
               }
             },
@@ -2644,7 +2670,7 @@
           },
           {
             "name": "category",
-            "description": "Category Information for the Product",
+            "description": "Category Information for the Product [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -2656,7 +2682,7 @@
           },
           {
             "name": "dependentSkus",
-            "description": "",
+            "description": "[Upstream Batman api/cart/query-data]",
             "args": [],
             "type": {
               "kind": "LIST",
@@ -2684,7 +2710,7 @@
           },
           {
             "name": "units",
-            "description": "Number of Units",
+            "description": "Number of Units [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2696,7 +2722,7 @@
           },
           {
             "name": "unitType",
-            "description": "Type of Unit (Ex: Count)",
+            "description": "Type of Unit (Ex: Count) [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2708,7 +2734,7 @@
           },
           {
             "name": "displayUnitPrice",
-            "description": "Whether or not Client Should Display Unit Price",
+            "description": "Whether or not Client Should Display Unit Price [Upstream Beast-Multiproduct]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2720,7 +2746,7 @@
           },
           {
             "name": "experienceId",
-            "description": "Experience Id",
+            "description": "Experience Id [Upstream Beast-Multiproduct Beast-Breadcrumb]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2732,7 +2758,7 @@
           },
           {
             "name": "recommendations",
-            "description": "Recommended Products Based on This Sku",
+            "description": "Recommended Products Based on This Sku [Upstream ProfX-Single Recommendations]",
             "args": [
               {
                 "name": "from",
@@ -2761,8 +2787,8 @@
                   "kind": "LIST",
                   "name": null,
                   "ofType": {
-                    "kind": "SCALAR",
-                    "name": "String",
+                    "kind": "ENUM",
+                    "name": "RecommendationStrategy",
                     "ofType": null
                   }
                 },
@@ -2786,8 +2812,20 @@
             "deprecationReason": null
           },
           {
+            "name": "trackingUrl",
+            "description": "Tracking Url - needs to be dispatched if user clicks on an product [Upstream ProfX-Single Recommendations]",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "recommendationType",
-            "description": "Type of Recommendation",
+            "description": "Type of Recommendation [Upstream ProfX-Single Recommendations]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2799,7 +2837,7 @@
           },
           {
             "name": "confidence",
-            "description": "ProfX Confidence in Recommendation",
+            "description": "ProfX Confidence in Recommendation [Upstream ProfX-Single Recommendations]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2811,7 +2849,7 @@
           },
           {
             "name": "primaryExperienceId",
-            "description": "",
+            "description": "[Upstream Beast-Multiproduct Beast-Breadcrumb]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2823,7 +2861,7 @@
           },
           {
             "name": "pdpCarousels",
-            "description": "",
+            "description": "[Upstream Storm PDP Carousels]",
             "args": [],
             "type": {
               "kind": "LIST",
@@ -2839,7 +2877,7 @@
           },
           {
             "name": "marketingSlotNumber",
-            "description": "Homepage Skus Slot Number",
+            "description": "Homepage Skus Slot Number [Upstream Storm Homepage Carousels]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2851,7 +2889,7 @@
           },
           {
             "name": "beaconId",
-            "description": "Beacons",
+            "description": "Beacons [Upstream ProfX Search or Storm Homepage/Carousel Skus]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2863,7 +2901,7 @@
           },
           {
             "name": "savedForLaterDate",
-            "description": "When product was saved for later",
+            "description": "When product was saved for later [Upstream Batman-api/mysaves]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2875,7 +2913,7 @@
           },
           {
             "name": "bundles",
-            "description": "Bundles",
+            "description": "Bundles [Upstream Storm bundles]",
             "args": [],
             "type": {
               "kind": "LIST",
@@ -2891,7 +2929,7 @@
           },
           {
             "name": "isFavorited",
-            "description": "Whether the Product is Favorited",
+            "description": "Whether the Product is Favorited [Upstream Batman-api/favorites/list]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2903,7 +2941,7 @@
           },
           {
             "name": "isSavedForLater",
-            "description": "Whether the Product is Saved For Later",
+            "description": "Whether the Product is Saved For Later [Upstream Batman-api/mysaves]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2931,7 +2969,7 @@
           },
           {
             "name": "selectedShippingOption",
-            "description": "Selected Shipping Option if Item is in Cart",
+            "description": "Selected Shipping Option if Item is in Cart  [Upstream Batman api/cart/query-data]",
             "args": [],
             "type": {
               "kind": "ENUM",
@@ -2942,8 +2980,24 @@
             "deprecationReason": null
           },
           {
+            "name": "isColocated",
+            "description": "Is the product colocated",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "productAuxiliaryData",
-            "description": "",
+            "description": "Auxiliary data on PDP [Upstream Beast-Product Auxiliary]",
             "args": [
               {
                 "name": "ids",
@@ -2970,7 +3024,7 @@
           },
           {
             "name": "searchTerm",
-            "description": "PLP Search Term",
+            "description": "PLP Search Term [Upstream ProfX Search]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2982,7 +3036,7 @@
           },
           {
             "name": "searchScore",
-            "description": "Search Score from ProfX",
+            "description": "Search Score from ProfX [Upstream ProfX Search]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2994,7 +3048,43 @@
           },
           {
             "name": "searchPosition",
-            "description": "Search Position in Array of Results",
+            "description": "Search Position in Array of Results [Upstream ProfX Search]",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "experienceName",
+            "description": "AutoComplete related fields [Upstream ProfX AutoComplete]",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "timesOrdered",
+            "description": "Number of Times the User Has Placed an Order That Contains This Sku [Upstream Mystique-/client/item_level_order_history]",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "quantityOrdered",
+            "description": "Sum of Quantity for This Sku Across All Orders From User [Upstream Mystique-/client/item_level_order_history]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -3135,7 +3225,7 @@
         "fields": [
           {
             "name": "effectivePrice",
-            "description": "Price that includes all savings",
+            "description": "Price that includes all savings [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -3147,7 +3237,7 @@
           },
           {
             "name": "listPrice",
-            "description": "MSRP price Merchants pass Through",
+            "description": "MSRP price Merchants pass Through [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -3159,7 +3249,7 @@
           },
           {
             "name": "referencePrice",
-            "description": "Competitive Price Merchants Send Through",
+            "description": "Competitive Price Merchants Send Through [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -3175,7 +3265,7 @@
           },
           {
             "name": "dealPercentOff",
-            "description": "Percentage off if the Item is a Deal",
+            "description": "Percentage off if the Item is a Deal [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -3187,7 +3277,7 @@
           },
           {
             "name": "effectivePricePerUnit",
-            "description": "Effective Price Per Unit at the Current Quantity",
+            "description": "Effective Price Per Unit at the Current Quantity [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -3203,7 +3293,7 @@
           },
           {
             "name": "quantityInCart",
-            "description": "Quantity of this Sku in Your Cart Across all Contexts (Bundles, Dependent, etc). Same Value as ProductAndPriceFlat.quantityInCart",
+            "description": "Quantity of this Sku in Your Cart Across all Contexts (Bundles, Dependent, etc). [Upstream Batman api/cart/query-data]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -3219,7 +3309,7 @@
           },
           {
             "name": "quantityInCartAsDependent",
-            "description": "Quantity of this Sku in Cart with 'anchorSkuId' as its Parent. Same Value as ProductAndPriceFlat.quantityInCartAsDependent",
+            "description": "Quantity of this Sku in Cart with 'anchorSkuId' as its Parent. [Upstream Batman api/cart/query-data]",
             "args": [
               {
                 "name": "anchorSkuId",
@@ -3246,7 +3336,7 @@
           },
           {
             "name": "totalSavings",
-            "description": "Total Item-Level Savings, not including Cart-Level and Order-Level Savings",
+            "description": "Total Item-Level Savings, not including Cart-Level and Order-Level Savings [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -3262,7 +3352,7 @@
           },
           {
             "name": "wasPrice",
-            "description": "Previous Price of the Product if isDeal=true",
+            "description": "Previous Price of the Product if isDeal=true [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -3274,7 +3364,7 @@
           },
           {
             "name": "availability",
-            "description": "The exact same thing as productAvailability field on ProductAndPriceFlat level",
+            "description": "The exact same thing as productAvailability field on ProductAndPriceFlat level [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -3290,7 +3380,7 @@
           },
           {
             "name": "quantityPrice",
-            "description": "An Array of a Single Object for Item Quantity = 1",
+            "description": "An Array of a Single Object for Item Quantity = 1 [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -3322,7 +3412,7 @@
           },
           {
             "name": "persistence",
-            "description": "Price Persistence Token from Superman",
+            "description": "Price Persistence Token from Superman [Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -3334,7 +3424,7 @@
           },
           {
             "name": "units",
-            "description": "",
+            "description": "[Upstream Superman-v2/Search]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -3346,7 +3436,7 @@
           },
           {
             "name": "currency",
-            "description": "Currency Type USD",
+            "description": "Currency Type USD [No upstream]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -3369,7 +3459,7 @@
         "fields": [
           {
             "name": "quantity",
-            "description": "",
+            "description": "[Upstream Superman PriceDetails]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -3381,7 +3471,7 @@
           },
           {
             "name": "price",
-            "description": "",
+            "description": "[Upstream Superman PriceDetails]",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -3404,7 +3494,7 @@
         "fields": [
           {
             "name": "quantity",
-            "description": "",
+            "description": "[Upstream Superman PriceDetails]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -3416,7 +3506,7 @@
           },
           {
             "name": "effectivePrice",
-            "description": "Price that includes all savings",
+            "description": "Price that includes all savings [Upstream Superman PriceDetails]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -3428,7 +3518,7 @@
           },
           {
             "name": "listPrice",
-            "description": "MSRP price Merchants pass Through",
+            "description": "MSRP price Merchants pass Through [Upstream Superman PriceDetails]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -3440,7 +3530,7 @@
           },
           {
             "name": "referencePrice",
-            "description": "Competitive Price Merchants Send Through",
+            "description": "Competitive Price Merchants Send Through [Upstream Superman PriceDetails]",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -3456,7 +3546,7 @@
           },
           {
             "name": "dealPercentOff",
-            "description": "Percentage off if the Item is a Deal",
+            "description": "Percentage off if the Item is a Deal [Upstream Superman PriceDetails]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -3468,7 +3558,7 @@
           },
           {
             "name": "effectivePricePerUnit",
-            "description": "Effective Price Per Unit at the Current Quantity",
+            "description": "Effective Price Per Unit at the Current Quantity [Upstream Superman PriceDetails]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -3480,7 +3570,7 @@
           },
           {
             "name": "wasPrice",
-            "description": "Previous Price of the Product if isDeal=true",
+            "description": "Previous Price of the Product if isDeal=true [Upstream Superman PriceDetails]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -3492,7 +3582,7 @@
           },
           {
             "name": "waiveReturnSavings",
-            "description": "Savings From Waiving Returns",
+            "description": "Savings From Waiving Returns [Upstream Superman PriceDetails]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -3504,7 +3594,7 @@
           },
           {
             "name": "currency",
-            "description": "Currency Type USD",
+            "description": "Currency Type USD [No upstream]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -3748,13 +3838,84 @@
         "possibleTypes": null
       },
       {
+        "kind": "ENUM",
+        "name": "RecommendationStrategy",
+        "description": "",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "none",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "coView",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "coPurchase",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "bestSeller",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "recentlyViewed",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "multiCoPurchase",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "productSimilarityRecommendations",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "visualRecommendations",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "richRelevance",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "postAddToCart",
+            "description": "",
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
+      },
+      {
         "kind": "OBJECT",
         "name": "Recommendations",
         "description": "",
         "fields": [
           {
             "name": "recommendationTitle",
-            "description": "",
+            "description": "indicate which recommendation is requested, ex. coview",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -3948,7 +4109,7 @@
         "fields": [
           {
             "name": "status",
-            "description": "",
+            "description": "Status of Order (Processing, Shipped, Delivered) [Upstream Gambit Order History]",
             "args": [],
             "type": {
               "kind": "ENUM",
@@ -3960,7 +4121,7 @@
           },
           {
             "name": "itemCount",
-            "description": "",
+            "description": "Number of items in upcoming shipment [Upstream Gambit Order History]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -3972,7 +4133,7 @@
           },
           {
             "name": "products",
-            "description": "",
+            "description": "Products in upcoming shipment [Upstream Gambit Order History]",
             "args": [],
             "type": {
               "kind": "LIST",
@@ -3988,7 +4149,7 @@
           },
           {
             "name": "displayDeliveryDate",
-            "description": "",
+            "description": "Delivery date in display string format [Upstream Gambit Order History]",
             "args": [
               {
                 "name": "timeZone",
@@ -4011,7 +4172,7 @@
           },
           {
             "name": "trackingUrl",
-            "description": "",
+            "description": "Tracking Url for upcoming shipment [Upstream Gambit Order History]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -4023,7 +4184,7 @@
           },
           {
             "name": "orderDate",
-            "description": "",
+            "description": "Order placement date for upcoming shipment [Upstream Gambit Order History]",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -4035,11 +4196,23 @@
           },
           {
             "name": "isScheduledDelivery",
-            "description": "",
+            "description": "Whether or not upcoming shipment is scheduled delivery [Upstream Gambit Order History]",
             "args": [],
             "type": {
               "kind": "SCALAR",
               "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "deliveredOn",
+            "description": "",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
               "ofType": null
             },
             "isDeprecated": false,
@@ -4248,7 +4421,7 @@
           },
           {
             "name": "products",
-            "description": "",
+            "description": "Search Result Products [Upstream ProfX Search]",
             "args": [],
             "type": {
               "kind": "LIST",
@@ -4264,7 +4437,110 @@
           },
           {
             "name": "searchSuggestions",
-            "description": "Search Suggestions",
+            "description": "Search Suggestions [Upstream ProfX Autocomplete]",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ProductSearchResult",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "autoComplete",
+            "description": "Auto complete [Upstream ProfX Autocomplete]",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "AutoCompleteSearchResult",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "suggestedPadding",
+            "description": "Auto complete indicate padding in UI [Upstream ProfX Autocomplete]",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "experienceId",
+            "description": "[Upstream ProfX Autocomplete]",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "experienceName",
+            "description": "[Upstream ProfX Autocomplete]",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "beaconId",
+            "description": "[Upstream ProfX Autocomplete]",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "AutoCompleteSearchResult",
+        "description": "",
+        "fields": [
+          {
+            "name": "bestsellers",
+            "description": "",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Product",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "suggestedTerms",
+            "description": "",
             "args": [],
             "type": {
               "kind": "LIST",
